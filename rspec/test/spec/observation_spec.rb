@@ -1,3 +1,14 @@
+class Person
+  attr_accessor :first_name, :last_name
+  def initialize(first_name, last_name)
+    @first_name = first_name
+    @last_name = last_name
+  end
+  def full_name
+    [@first_name, @last_name].join(' ')
+  end
+end
+
 describe "observation matchers" do
 
   it "will match when event change object attribute" do
@@ -17,21 +28,12 @@ describe "observation matchers" do
   end
 
   it "will match when change object attributes" do
-    class Person
-      attr_accessor :first_name, :last_name
-      def initialize(first_name, last_name)
-        @first_name = first_name
-        @last_name = last_name
-      end
-      def full_name
-        [@first_name, @last_name].join(' ')
-      end
-    end
-    mario = Person.new('mario', 'rossi')
+
     # expect do
     #   mario.last_name = 'smith'
     # end.to change(mario, :full_name).from('mariosssrossi').to('mario smith')
     # second format for expect
+    mario = Person.new('mario', 'rossi')
     expect { mario.last_name = 'smith'}.to change(mario, :full_name).from('mario rossi').to('mario smith')
   end
 
