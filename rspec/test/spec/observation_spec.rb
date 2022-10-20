@@ -1,3 +1,12 @@
+class WebSiteHits
+  attr_accessor :count
+  def initialize
+    @count = 0
+  end
+  def increment
+    @count += 1
+  end
+end
 class Person
   attr_accessor :first_name, :last_name
   def initialize(first_name, last_name)
@@ -12,15 +21,6 @@ end
 describe "observation matchers" do
 
   it "will match when event change object attribute" do
-    class WebSiteHits
-      attr_accessor :count
-      def initialize
-        @count = 0
-      end
-      def increment
-        @count += 1
-      end
-    end
     hits = WebSiteHits.new
     # expect { hits.increment }.to change {hits.count}.from(0).to(1)
     # second format for change :
@@ -36,7 +36,6 @@ describe "observation matchers" do
     mario = Person.new('mario', 'rossi')
     expect { mario.last_name = 'smith'}.to change(mario, :full_name).from('mario rossi').to('mario smith')
   end
-
 
   it "excpect to raise an error" do
     class NumTest
