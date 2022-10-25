@@ -1,3 +1,4 @@
+
 module Z
     module A
         def a_msg
