@@ -1,3 +1,8 @@
+  # expect(obj).to be_a_kind_of(type)      # same as expect(obj).to be_kind_of(type)
+  # expect(obj).to be_a(type)              # same as expect(obj).to be_kind_of(type)
+  # expect(obj).to be_an(type)             # same as expect(obj).to be_kind_of(type)
+  # expect(obj).to be_an_instance_of(type) # same as expect(obj).to be_instance_of(type)
+
 require "../car-project/lib/car.rb"
 
 describe "Type Matchers" do
