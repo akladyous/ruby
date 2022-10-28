@@ -35,6 +35,9 @@ describe "collection matchers" do
   it "includes key pairs" do
     expect(@hash1).to include(:a => 1)
   end
+  it "includes multiple key pairs" do
+    expect(@hash1).to include(:a, :b)
+  end
   it "not includes key pairs" do
     expect(@hash1).not_to include(:c => 3)
   end
