@@ -1,0 +1,8 @@
+--require spec_helper
+
+--color
+--format documentation
+--profile
+--no-fail-fast
+--order defined
+--require spec_helper
