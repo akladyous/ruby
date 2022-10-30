@@ -2,7 +2,8 @@ describe "Numeric Matchers" do
 
   describe "be_within matcher" do
     it "should be true if 3.03 fall within range of numbers" do
-      expect(3.05).to be_within(0.05).of(3)
+      # expect(3.05).to be_within(0.05).of(3)
+      expect(2.95).to be_within(0.05).of(3)
     end
   end
 
