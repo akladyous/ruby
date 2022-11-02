@@ -2,7 +2,7 @@
 
 --color
 --format documentation
---profile
+--no-profile
 --no-fail-fast
 --order defined
 --require spec_helper

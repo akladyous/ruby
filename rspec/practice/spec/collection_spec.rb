@@ -27,7 +27,7 @@ describe "collection matchers" do
     expect(@odd).to include(be_odd.and be < 10)
   end
   it "include with other matchers" do
-    expect(@odd).to include(be_odd).at_least :twice
+    expect(@odd).to include(be_odd).at_least(:twice)
   end
   it "include with at_least" do
     expect(@odd).to include(be_odd).at_least(3).times

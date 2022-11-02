@@ -4,7 +4,7 @@ describe "expectation matchers" do
     it "match loose equiality with #rq" do
       a=1
       b=1
-      expect(a).to eq(b)
+      expect(a).to eql(b)
     end
     it "match value equality with #eql" do
       a=1
