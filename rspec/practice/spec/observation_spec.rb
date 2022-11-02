@@ -62,4 +62,9 @@ describe "observation matchers" do
     expect { x += 1 }.to change{x}.from(10).to(11)
     expect { x += 1 }.to change{x}.by(1)
   end
+
+  it "increment array length by 1" do
+    ar1 = []
+    expect{ ar1 << 1 }.to change{ ar1.size }.by(1)
+  end
 end
