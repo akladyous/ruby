@@ -1,33 +1,20 @@
-module Calc
-    TAX = 0.15
-    # module Y
-    #     def self.msg
-    #         puts Module.nesting.inspect
-    #         puts TAX
-    #         "some message"
-    #     end
-    # end
+module Foo
 
-    def self.get_tax
-        TAX
-    end
-
-    def self.module_method
-        puts "tax is : #{TAX}"
-    end
-
-    def salary
-        rand(100..150)
-    end
-    def zz
-        rand(100..150)
-    end
-
-
-
-    class GetSalary
-        TAX
-    end
-
+  def test1
+    puts 'test1 from Foo Module'
+  end
 end
 
+class A
+  include Foo
+end
+class B
+  extend Foo
+end
+a1=A.new
+puts 'include Foo as instance methods'
+puts a1.test1
+puts "-" * 40
+puts 'extend Foo as class methods'
+puts B.test1
+puts "-" * 40
