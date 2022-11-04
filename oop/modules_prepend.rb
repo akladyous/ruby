@@ -20,3 +20,16 @@ module EditProtection
     end
   end
 end
+class User
+  attr_accessor :name, :admin
+  def initialize(name, admin)
+    @name = name
+    @admin = admin
+  end
+  prepend EditProtection
+end
+normal = User.new('Marc', false)
+admin  = User.new('Will', true)
+normal.enable_edits
+normal.admin = true
+p normal.admin
