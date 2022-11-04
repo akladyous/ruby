@@ -1,4 +1,5 @@
-class UserProtection
+require 'debug'
+module UserProtection
   attr_accessor :operator
 
   def name=(val)
@@ -10,6 +11,7 @@ class UserProtection
   end
 
   def admin=(val)
+    # debugger
     if operator && operator.admin
       super
     else
@@ -25,3 +27,8 @@ class User
   end
   prepend UserProtection
 end
+normal = User.new('Fred', false)
+admin = User.new('Marc', true)
+debugger
+normal.admin = true
+p normal.admin
