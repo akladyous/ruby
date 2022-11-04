@@ -1,11 +1,14 @@
+require 'debug'
+
 module Bar
   def my_method
     'inside the module'
+    super
   end
 end
 
 class Foo
-  include Bar
+  prepend Bar
   def my_method
     'inside the class'
   end
