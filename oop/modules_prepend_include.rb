@@ -1,18 +1,27 @@
-require 'debug'
+class UserProtection
+  attr_accessor :operator
 
-module Bar
-  def my_method
-    'inside the module'
-    super
+  def name=(val)
+    if operator && operator.admin
+      super
+    else
+      raise "you don't have permissions to set this attributes"
+    end
+  end
+
+  def admin=(val)
+    if operator && operator.admin
+      super
+    else
+      raise "you don't have permissions to set this attributes"
+    end
   end
 end
-
-class Foo
-  prepend Bar
-  def my_method
-    'inside the class'
+class User
+  attr_accessor :name, :admin
+  def initialize(name, admin)
+    @name = name
+    @admin = admin
   end
+  prepend UserProtection
 end
-
-x = Foo.new
-p x.my_method
