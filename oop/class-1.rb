@@ -32,3 +32,5 @@ puts "student instance variables : ", s1.instance_variables
 p "-" * 20
 puts s1.class.superclass.instance_variables
 p "-" * 20
+
+
