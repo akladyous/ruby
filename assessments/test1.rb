@@ -8,3 +8,4 @@ end
 
 
 
+puts get_middle "hello world"
