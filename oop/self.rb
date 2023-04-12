@@ -13,14 +13,14 @@ end
 One.hello
 One.whoami
 one = One.new
-puts one.singleton_class
+puts 'singleton class' ,  one.singleton_class
 
 
 class Person
 end
 p1=Person.new
 def p1.name
-  puts "ciao"
+  puts 'ciao'
   puts "singleton method self       : #{self}"
   puts "singleton method self.class : #{self.class}"
 end

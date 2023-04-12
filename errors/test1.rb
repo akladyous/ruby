@@ -9,6 +9,6 @@ end
 begin
   raise 'this is an exception'
 rescue StandardError => e
-  # debugger
+  debugger
   puts "Errors: #{e.message}"
 end
