@@ -1,6 +1,7 @@
 module Person
-  def get_fullname(first_name, last_name)
-    "first name : #{first_name} lastname: #{last_name}"
+  attr_accessor :first_name, :last_name
+  def get_fullname
+    "first name : #{self.first_name} lastname: #{self.last_name}"
   end
 
   def self.capitalizeFirstName(string)
@@ -12,8 +13,6 @@ end
 class White
   include Person
   extend Person
-
-  attr_accessor :first_name, :last_name
   def initialize(first_name, last_name)
     @first_name = first_name
     @last_name = last_name
@@ -21,4 +20,5 @@ class White
 end
 
 p1 = White.new("john", "doe")
-puts p1.get_fullname(p1.first_name, p1.last_name)
+puts p1.get_fullname
+puts Person.capitalizeFirstName "hello"
