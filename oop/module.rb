@@ -1,5 +1,4 @@
 module Foo
-
   def test1
     puts 'test1 from Foo Module'
   end
