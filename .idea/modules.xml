@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/oop.iml" filepath="$PROJECT_DIR$/.idea/modules/oop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/phase-3-active-record-associations-methods.iml" filepath="$PROJECT_DIR$/.idea/modules/phase-3-active-record-associations-methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rails_app.iml" filepath="$PROJECT_DIR$/.idea/modules/rails_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rails_app1.iml" filepath="$PROJECT_DIR$/.idea/modules/rails_app1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rspec.iml" filepath="$PROJECT_DIR$/.idea/modules/rspec.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ruby.iml" filepath="$PROJECT_DIR$/.idea/ruby.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/test.iml" filepath="$PROJECT_DIR$/.idea/modules/test.iml" />
+    </modules>
+  </component>
+</project>
