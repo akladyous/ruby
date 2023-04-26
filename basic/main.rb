@@ -19,9 +19,7 @@ end
 only_kwargs(name: 'paolo', age: 10)
 def kwargs_with_default(name: 'paolo', **rest)
   p name
-ensure rest.include? :age
-p ":age is missing"
   p rest[:age]
   # p "age: #{rest}" if rest.keys.include? :age
 end
-kwargs_with_default
+kwargs_with_default age: 33
