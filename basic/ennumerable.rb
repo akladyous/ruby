@@ -14,7 +14,10 @@ boolean_array.all? { |val| val == true || val == false }      # true
 
 a1 = Array.new(10) { rand(10) }
 a1.count { |num| num > 3 }      # 8
-{ a: 1, b: 2, c: 3, d: 4 }.count { |k, v| v > 2 }   # 2
+
+d1 = { a: 1, b: 2, c: 3, d: 4 }
+
+
 
 Array.new(10) { rand(97..122) }.map { |num| num.chr }.tally # {"a"=>1, "g"=>2, "y"=>2, "u"=>2, "m"=>1, "t"=>1, "q"=>1}
 
