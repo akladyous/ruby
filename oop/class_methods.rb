@@ -8,9 +8,10 @@ class User
   end
 
   def full_name
-    "#{self.first_name}. #{self.last_name}"
+    "#{self.first_name.capitalize} #{self.last_name.capitalize}"
   end
 
 end
 
-john = User.new('john', 'doe')
+john = User.new "john", "doe", 21
+print(john.full_name)
