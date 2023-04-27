@@ -13,3 +13,4 @@ class User
 
 end
 
+john = User.new('john', 'doe')
