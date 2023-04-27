@@ -1,3 +1,5 @@
+#@!scope
+
 def only_keywords(**) # accept keyword arguments
   p(**) # and pass them to the next method
 end
@@ -22,4 +24,4 @@ def kwargs_with_default(name: 'paolo', **rest)
   p rest[:age]
   # p "age: #{rest}" if rest.keys.include? :age
 end
-kwargs_with_default age: 33
+
