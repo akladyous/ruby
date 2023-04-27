@@ -11,6 +11,7 @@ class Person
   end
 
   def self.inherited(subclass)
+
     subclass.define_method :full_name do
       [first_name, last_name].join(' ')
     end
