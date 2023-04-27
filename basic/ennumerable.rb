@@ -12,7 +12,7 @@ boolean_array.all? { |val| val == true || val == false }      # true
 [1, 2, 3].any? { |num| num > 2 }                            # true
 [1, 2, 3, 4, 5].one? { |num| num > 3 }                      # false
 
-Array.new(10) { rand(10) }.count { |num| num > 3 }      # 8
+a1 = Array.new(10) { rand(10) }
 { a: 1, b: 2, c: 3, d: 4 }.count { |k, v| v > 2 }   # 2
 
 Array.new(10) { rand(97..122) }.map { |num| num.chr }.tally # {"a"=>1, "g"=>2, "y"=>2, "u"=>2, "m"=>1, "t"=>1, "q"=>1}
@@ -23,6 +23,8 @@ Array.new(10) { rand(97..122) }.map { |num| num.chr }.tally # {"a"=>1, "g"=>2, "
 hash_to_group = {foo: 3, bar: 2, baz: 1}
 hash_to_group.group_by { |key, value| value}      # {3=>[[:foo, 3]], 2=>[[:bar, 2]], 1=>[[:baz, 1]]}
 hash_to_group.group_by { |key, value| key}        #  {:foo=>[[:foo, 3]], :bar=>[[:bar, 2]], :baz=>[[:baz, 1]]}
+
+
 
 
 url = 'https://raw.githubusercontent.com/eneko/data-repository/master/data/words.txt'
