@@ -27,12 +27,23 @@ john = User.new "john", "doe", 21
 print(john.full_name)
 p john.get_password
 p "-" * 50
-puts "public methods"
+
+puts "public_methods"
 p "-" * 50
 puts User.public_methods false
-puts "private methods"
+
+puts "private_methods"
 p "-" * 50
+# private_methods is a method defined on the Object class, which returns a list of all private instance methods defined in the class and its ancestors.
+# This means that it includes private methods that can be called on instances of the class as well as private class methods that can be called on the class itself.
 puts User.private_methods false
-puts "protected methods"
+puts "protected_methods"
 p "-" * 50
 puts User.protected_methods false
+
+puts "private_instance_methods"
+# private_instance_methods, on the other hand, is a method defined on the Module class,
+# which returns a list of all private instance methods defined in the class or module but excludes any private class methods.
+# This means that it only includes private instance methods that can be called on instances of the class or module and not private class methods.
+p "-" * 50
+puts User.private_instance_methods false
