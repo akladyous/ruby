@@ -29,9 +29,6 @@ hash_to_group = {foo: 3, bar: 2, baz: 1}
 hash_to_group.group_by { |key, value| value}      # {3=>[[:foo, 3]], 2=>[[:bar, 2]], 1=>[[:baz, 1]]}
 hash_to_group.group_by { |key, value| key}        #  {:foo=>[[:foo, 3]], :bar=>[[:bar, 2]], :baz=>[[:baz, 1]]}
 
-
-
-
 url = 'https://raw.githubusercontent.com/eneko/data-repository/master/data/words.txt'
 words = URI::open(url).readlines
 # Make chunks, one for each letter.
