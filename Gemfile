@@ -2,6 +2,7 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.0"
+gem 'rbs', '~> 3.1'
 
 group :development do
   gem 'debug', platforms: %i[ mri mingw x64_mingw ]
