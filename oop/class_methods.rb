@@ -1,5 +1,6 @@
+
 class User
-  @@min_age = 18;
+  @@min_age = 18
   attr_accessor :first_name, :last_name, :age
 
   def initialize(first_name, last_name, age)
@@ -55,4 +56,16 @@ p "-" * 50
 puts User.private_instance_methods false
 
 p "-" * 50
+
+begin
+pp User.user_private_class_method
+rescue NoMethodError => e
+  puts e.message
+  puts "method doesn't exist"
+end
+
+
+
+
+
 

@@ -19,6 +19,6 @@ class User
   # class methods
   def self.get_min_age: () -> Integer
 
-  def user_private_class_method: () -> void
+  def self.user_private_class_method: () -> void
 
 end
