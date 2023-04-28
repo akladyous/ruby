@@ -17,21 +17,21 @@ class User
   def set_password(new_password)
     @password = new_password
   end
-
-  # class methods
   def self.get_min_age
     @@min_age
   end
 
-
-  private_class_method(:get_min_age)
+  def self.user_private_class_method
+    "this is a private class method"
+  end
+  private_class_method(:user_private_class_method)
   private
     @password
 
 end
 john = User.new "john", "doe", 21
 print(john.full_name)
-p john.get_password
+p "john.get_password " , john.get_password
 p "-" * 50
 
 puts "public_methods"
@@ -53,4 +53,6 @@ puts "private_instance_methods"
 # This means that it only includes private instance methods that can be called on instances of the class or module and not private class methods.
 p "-" * 50
 puts User.private_instance_methods false
+
+p "-" * 50
 
