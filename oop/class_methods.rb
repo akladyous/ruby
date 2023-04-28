@@ -1,11 +1,11 @@
 class User
+  @@min_age = 18;
   attr_accessor :first_name, :last_name, :age
 
   def initialize(first_name, last_name, age)
     @first_name = first_name
     @last_name  = last_name
     @age        = age
-
   end
 
   def full_name
@@ -18,11 +18,17 @@ class User
     @password = new_password
   end
 
+  # class methods
+  def self.get_min_age
+    @@min_age
+  end
+
+
+  private_class_method(:get_min_age)
   private
     @password
 
 end
-
 john = User.new "john", "doe", 21
 print(john.full_name)
 p john.get_password
@@ -47,3 +53,4 @@ puts "private_instance_methods"
 # This means that it only includes private instance methods that can be called on instances of the class or module and not private class methods.
 p "-" * 50
 puts User.private_instance_methods false
+
