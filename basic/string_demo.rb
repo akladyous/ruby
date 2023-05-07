@@ -11,3 +11,5 @@ s3 =
 has two lines \
 but is written on three"
 puts s3
+s4 = %q<hello al dila' world>
+puts s4
