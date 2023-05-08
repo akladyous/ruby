@@ -26,3 +26,5 @@ fib.take(10)
 
 enum = %W[one two three four]
 enum.each_with_object([]) { |item, obj| puts obj[0]; obj.push('test') }
+
+(0..9).find(proc {"mafish"}) {|element| element > 12}
