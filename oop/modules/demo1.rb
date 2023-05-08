@@ -22,3 +22,8 @@ end
 p1 = White.new("john", "doe")
 puts p1.get_fullname
 puts Person.capitalizeFirstName "hello"
+
+def counter(n=0)
+  Proc.new {|count| n+=1; n=n+count if count}
+end
+puts counter(1).call()

@@ -10,4 +10,3 @@ response = words.collect do |word|
   end
   response                        # Return the response
 end
-
