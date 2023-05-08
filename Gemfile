@@ -6,8 +6,11 @@ ruby "3.2.0"
 
 group :development do
   gem 'debug', platforms: %i[ mri mingw x64_mingw ]
-  gem 'pry', '~> 0.14.1'
+  gem 'pry', 
   gem 'rbs'
   gem 'solargraph', '~> 0.49.0'
+  gem "solargraph-rails"
+  gem "htmlbeautifier"
+  gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'main', require: false
 end
 
