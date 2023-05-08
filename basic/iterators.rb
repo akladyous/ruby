@@ -11,3 +11,5 @@ def sum_numbers(*nums)
 end
 
 sum_numbers(1,1,1) { |x| puts x}
+
+str = "hello world!"
