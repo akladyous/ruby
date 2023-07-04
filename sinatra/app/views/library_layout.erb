@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Burd Antiquities Library</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <!-- <style> nav {background: #fbff9c} </style> -->
+    <style> nav {background: linear-gradient(to right, #fbff9c , white)}</style>
+    <nav>
+      <% if logged_in? %>
+
+        <b><a href="/books/new">&emsp; Add a new book to the catalog </a></b>
+        <b><a href="/authors/new">&emsp; &emsp; Add a new author to the catalog </a></b>
+        <b><a href="/logout">&emsp; &emsp; &emsp; &emsp; Log Out </a></b>
+        <p>
+          <p1 style="font-size:220%; font-family:verdana; color: grey;">&emsp; Burd Antiquities Library</p1>
+          <p1 style="font-size:170%; font-family:verdana; color: grey;">&emsp; &emsp; &emsp; &emsp; Welcome, <%=current_user.username %></p1>
+        </p>
+      <% else %>
+        <b><a href="/signup"> Sign Up </a></b>
+        <b><a href="/login">&emsp; &emsp; &emsp; &emsp; Sign In </a></b>
+        <p>
+          <p1 style="font-size:220%; font-family:verdana; color: grey;">&emsp; Burd Antiquities Library</p1>
+          <p1 style="font-size:170%; font-family:verdana; color: grey;">&emsp; &emsp; &emsp; &emsp; Welcome, Guest</p1>
+        </p>
+      <%end %>
+
+    </nav>
+    <div class="container">
+      <%= yield %>
